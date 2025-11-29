@@ -4,8 +4,8 @@
 namespace esphome {
     namespace mhi {
         // Temperature
-        const float MHI_TEMP_MIN = 18; // Celsius
-        const float MHI_TEMP_MAX = 30; // Celsius
+        float MHI_TEMP_MIN = 18; // Celsius
+        float MHI_TEMP_MAX = 30; // Celsius
 
         class MhiClimate : public climate_ir::ClimateIR {
             public:
