@@ -4,13 +4,13 @@
 namespace esphome {
     namespace mhi {
         // Temperature
-        float MHI_TEMP_MIN = 18; // Celsius
-        float MHI_TEMP_MAX = 30; // Celsius
-
-        class MhiClimate : public climate_ir::ClimateIR {
+        const uint8_t MHI_TEMP_MIN = 18; // Celsius
+        const uint8_t MHI_TEMP_MAX = 30; // Celsius
+        
+            class MhiClimate : public climate_ir::ClimateIR {
             public:
                 MhiClimate() : climate_ir::ClimateIR(
-                    MHI_TEMP_MIN, MHI_TEMP_MAX, 1.0f, true, true,
+                    float(MHI_TEMP_MIN), float(MHI_TEMP_MAX), 1.0f, true, true,
                     {
                         climate::CLIMATE_FAN_AUTO, climate::CLIMATE_FAN_LOW,
                         climate::CLIMATE_FAN_MEDIUM, climate::CLIMATE_FAN_HIGH
